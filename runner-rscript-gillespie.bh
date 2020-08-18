@@ -1,0 +1,11 @@
+#!/bin/sh
+
+#echo $$ > pidbash$(date "+%Y.%m.%d-%H.%M.%S").sh
+#sleep 2
+
+for samp in {1..20} #1..4
+do
+       Rscript sir-stochastic.R $samp &
+       sleep 30
+done
+
